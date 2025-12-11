@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI Fake Image Detector — Lightweight</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="logo" class="logo">
+      <div>
+        <h1>AI Fake Image Detector</h1>
+        <p class="tag">Lightweight checker for small businesses — simple, fast, local.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card upload-card">
+      <h2>Upload an image</h2>
+      <p>We analyze the image locally in your browser and give a percentage score.</p>
+      <input id="imageInput" type="file" accept="image/*">
+      <div id="previewWrap" class="preview-wrap hidden">
+        <img id="previewImage" alt="preview">
+      </div>
+      <div class="controls">
+        <button id="analyzeBtn" class="btn primary" disabled>Analyze Image</button>
+        <button id="resetBtn" class="btn" disabled>Reset</button>
+      </div>
+      <div id="loader" class="loader hidden">Analyzing…</div>
+      <div id="result" class="result hidden"></div>
+    </section>
+
+    <section class="card info-card">
+      <h3>How it works</h3>
+      <ol>
+        <li>We run a lightweight heuristic that checks texture/edges/noise and metadata.</li>
+        <li>The result is a score from <strong>0–100%</strong>. Scores ≥ <strong>90%</strong> are flagged as <em>AI generated</em>.</li>
+        <li>This runs <strong>entirely in your browser</strong> — no files are uploaded.</li>
+      </ol>
+
+      <h3>Helpful features</h3>
+      <ul>
+        <li>Simple explanation for small-business customers</li>
+        <li>Downloadable report (TXT)</li>
+        <li>Image preview and basic metadata</li>
+      </ul>
+
+      <h3>Notes</h3>
+      <p>This is a <strong>lightweight heuristic detector</strong> (B1). It's fast and easy to run locally but not as accurate as large trained models.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Built for small industries — runs locally, respects privacy.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
